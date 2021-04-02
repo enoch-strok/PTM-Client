@@ -135,16 +135,16 @@ const ProjectList = props => {
                     {inputList.map((item, i) => {
                         return(
                             <tr key={i} >
-                                    <td className="w-25 p-3 text-center">
+                                    <td className="p-3 text-center">
                                         <input type="text" name="projectName" placeholder="Project Name" size="25" value={item.projectName} onKeyDown={handlePressEnter} onChange={e => handleChange(e,i)}></input>
                                     </td>
-                                    <td className="w-25 p-3 text-center">
+                                    <td className=" p-3 text-center">
                                         <input type="text" name="projectStatus" placeholder="Project Status" size="25" value={item.projectStatus} onKeyDown={handlePressEnter} onChange={e => handleChange(e,i)}></input>                       
                                     </td>
-                                    <td className="w-25 p-3 text-center">
+                                    <td className=" p-3 text-center">
                                         <input type="text" name="progress" placeholder=" 0-100" size="2" value={item.progress} onKeyDown={handlePressEnter} onChange={e => handleChange(e,i)}></input>%
                                     </td>
-                                    <td className="w-25 p-3 text-center">
+                                    <td className=" p-3 text-center">
                                         <button type="submit" className="btn btn-primary" onClick={() => AddNewProjectData(i)}>Submit</button>
                                         <a> </a>
                                         <button type="submit" className="btn btn-secondary" onClick={() => removeNewProjectField(i)}>Remove</button>                       
