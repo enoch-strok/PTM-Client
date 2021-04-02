@@ -20,7 +20,7 @@ const ProjectList = props => {
       ]);
 
       useEffect(() => {
-        axios.get("https://ptm-server.herokuapp.com:9000/project/all")
+        axios.get("https://ptm-server.herokuapp.com/project/all")
           .then(response => {
             console.log("Initial Server Response: ",response);
             setProjectList(response.data);
@@ -59,7 +59,7 @@ const ProjectList = props => {
         // setDataList(data);
         const {projectName, projectDescription, projectStatus, progress} = data;
 
-        axios.post('https://ptm-server.herokuapp.com:9000/project/add', {
+        axios.post('https://ptm-server.herokuapp.com/project/add', {
             projectName,
             projectDescription,
             projectStatus,
@@ -84,7 +84,7 @@ const ProjectList = props => {
     }
 
     const deleteOneProject = (projectId) => {
-        axios.delete(`https://ptm-server.herokuapp.com:9000/project/delete/${projectId}`)
+        axios.delete(`https://ptm-server.herokuapp.com/project/delete/${projectId}`)
             .then(res => {
                 console.log("Delete Response: ",res);
                 setTrigger(trigger + 1);
