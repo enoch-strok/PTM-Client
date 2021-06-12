@@ -95,7 +95,7 @@ const SubProjectList = props => {
                                                   <div className="row">
 
                                                     {/* Section 1 */}
-                                                    <section className="col-6">
+                                                    <section className="w-24">
                                                         <div className="row">
                                                             <div className="col">
                                                                 Project Name: 
@@ -173,21 +173,63 @@ const SubProjectList = props => {
                                                                 
                                                             </div>
                                                         </div>
-                                                        
+                                                    <br />
+
+
+
                                                     </section>
+                                                    <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                        
+                                                        </div>
+                                                        <div class="col">
+                                                        
+                                                    <td className="w-6 p-2 text-center align-center"><button type="button" className="btn btn-outline-success" onClick={() => console.log("Clicked Update!")}>Update</button></td>
+                                                        </div>
+                                                        <div class="col">
+                                                        
+                                                    <td className="w-25 p-2 text-left align-middle">
+                                                        <button 
+                                                        type="button" 
+                                                        className="btn btn-outline-warning" 
+                                                        onClick={() => console.log("Clicked Cancel!")}
+                                                        >Cancel
+                                                        </button>
+                                                    </td>
+                                                        </div>
+                                                        <div class="col">
+                                                        
+                                                        </div>
+                                                        <div class="col">
+                                                        
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    
 
-
+                                                    {/* TODO: Working Area                                                */}
+                                                    
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    
+                                                    <tr class="card-header" >
+                                                        <td class="w-24 p-2 text-center align-middle">Sub-Projects</td>
+                                                    </tr>  
                                                     {/* Section 2 */}
-                                                    <section className="col-6">
+                                                    <section className="w-24">
+
+
                                                         <div className="row">
                                                             <div className="card">
-                                                                <div className="card-header">
-                                                                    Sub-Projects
-                                                                </div>
+                                                                {/* <div className="card-header">
+                                                                    Name
+                                                                </div> */}
                                                                 <ul className="list-group list-group-flush">
-                                                                    <li className="list-group-item">An item</li>
-                                                                    <li className="list-group-item">A second item</li>
-                                                                    <li className="list-group-item">A third item</li>
+                                                                    <li className="list-group-item">Item 1</li>
+                                                                    <li className="list-group-item">Item 2</li>
+                                                                    <li className="list-group-item">Item 3</li>
                                                                     <li className="list-group-item">
                                                                         {/* <button type="button" className="btn btn-secondary" onClick={addNewProjectField}>+</button> */}
                                                                         <button type="button" className="btn btn-secondary" >+</button>
@@ -195,40 +237,17 @@ const SubProjectList = props => {
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                        {/* <div className="row">
-                                                            <div className="col">
-                                                            </div>
-                                                            <div className="col">
-                                                                2
-                                                            </div>
-                                                            <div className="col">
-                                                                3
-                                                            </div>
-                                                            <div className="col">
-                                                                4
-                                                            </div>
-                                                        </div> */}
+                                                        <br />
+                                                        <br />
+                                                        <br />
                                                     </section>
-                                                    <td className="w-25 p-2 text-center align-center"><button type="button" className="btn btn-outline-danger" onClick={() => console.log("Clicked Update!")}>Update</button></td>
-                                                    <td className="w-25 p-2 text-left align-middle"><button type="button" className="btn btn-outline-danger" onClick={() => console.log("Clicked Cancel!")}>Cancel</button></td>
-                                                    <br />
-                                                    <br />
-                                                    <br />
-                                                    <br />
-                                                    <br />
-                                                    <br />
+
                                                     <td className="w-24 p-2 text-center align-center"><button type="button" className="btn btn-outline-danger" onClick={() => deleteOneProject(data._id)}>Delete</button></td>
+
+                                                    <br />
+                                                    <br />
+
                                                 </div>
-
-
-
-
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <br/>
 
                                     {subProject.map((x, idx)=> {
                                         return (
