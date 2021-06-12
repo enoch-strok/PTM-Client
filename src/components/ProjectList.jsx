@@ -44,9 +44,9 @@ const ProjectList = props => {
     const handleChange = (e,index) => {
         const {name,value} = e.target;
         const list = [...inputList];
-        console.log('List Before Value Change: ', list);
+        // console.log('List Before Value Change: ', list);
         list[index][name] = value;
-        console.log('List After Value Change: ', list);
+        // console.log('List After Value Change: ', list);
         setInputList(list);
     }
     
@@ -119,17 +119,6 @@ const ProjectList = props => {
         setInputList(list);
     }
 
-    const deleteOneProject = (projectId) => {
-        axios.delete(`https://ptm-server.herokuapp.com/project/delete/${projectId}`)
-            .then(res => {
-                console.log("Delete Response: ",res);
-                setTrigger(trigger + 1);
-                console.log('deleteOneProject Triggered ',trigger);
-            })
-            .catch(err => {
-                console.log("Delete Attempt Error: ",err);
-            })
-    };
 
     return (
             <>
@@ -156,7 +145,7 @@ const ProjectList = props => {
                                     <td className="w-25 p-2 text-center align-middle">{data.projectName}</td>
                                     <td className="w-25 p-2 text-center align-middle">{data.projectStatus}</td>
                                     <td className="w-25 p-2 text-center align-middle">{data.progress}%</td>
-                                    <td className="w-25 p-2 text-center align-middle"><button type="button" className="btn btn-outline-danger" onClick={() => deleteOneProject(data._id)}>Delete</button></td>
+                                    <td className="w-25 p-2 text-center align-middle"></td>
                                     
                                 </tr>
                                 <tr>

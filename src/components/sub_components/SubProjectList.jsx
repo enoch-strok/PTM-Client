@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+
 import axios from 'axios';
 
 const SubProjectList = props => {
@@ -21,13 +21,14 @@ const SubProjectList = props => {
         const list = [...inputList];
         const filteredObj = list.find(obj => {
             return obj._id === id});
-        const indexOf = filteredObj.indexOf('._id' === id);
-        console.log({filteredObj});
-        console.log('indexOf: ',indexOf);
+        //TODO: Bookmark                                         /
+        // const indexOf = filteredObj.indexOf('._id' === id); 
+        // console.log({filteredObj});
+        // console.log('indexOf: ',indexOf);
         list[0][name] = value;
         setInputList(list);
         // setTrigger(trigger + 1);
-        console.log('List After Trigger ',list);
+        // console.log('List After Trigger ',list);
         ////////////////////////////////////////////////////Need to add a filter here to find the object with matching ._id and pass ._id through handleChange(data._id)...
     }
 
@@ -54,6 +55,18 @@ const SubProjectList = props => {
         list.splice(i, 1);
         setInputList(list);
     }
+
+    const deleteOneProject = (projectId) => {
+        axios.delete(`https://ptm-server.herokuapp.com/project/delete/${projectId}`)
+            .then(res => {
+                console.log("Delete Response: ",res);
+                setTrigger(trigger + 1);
+                console.log('deleteOneProject Triggered ',trigger);
+            })
+            .catch(err => {
+                console.log("Delete Attempt Error: ",err);
+            })
+    };
     
     return (
                 <div>
@@ -89,7 +102,8 @@ const SubProjectList = props => {
                                                             </div>
                                                             <div className="col">
                                                                 {/* <input type="text" name="projectName" placeholder="Project Name" size="25" value={data.projectName}/> */}
-                                                                <input type="text" name="projectName" placeholder={data.projectName} onChange={e => handleChange(e,data._id)} size="25" />
+                                                                <input type="text" name="projectName" placeholder={data.projectName} size="25" />
+                                                                {/* <input type="text" name="projectName" placeholder={data.projectName} onChange={e => handleChange(e,data._id)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -103,7 +117,8 @@ const SubProjectList = props => {
                                                                 Project Status: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="projectStatus" placeholder={data.projectStatus} onChange={e => handleChange(e,index)} size="25" />
+                                                                <input type="text" name="projectStatus" placeholder={data.projectStatus} size="25" />
+                                                                {/* <input type="text" name="projectStatus" placeholder={data.projectStatus} onChange={e => handleChange(e,index)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -118,7 +133,8 @@ const SubProjectList = props => {
                                                                 Progress: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="progress" placeholder={data.progress} onChange={e => handleChange(e,index)} size="25" />
+                                                                <input type="text" name="progress" placeholder={data.progress} size="25" />
+                                                                {/* <input type="text" name="progress" placeholder={data.progress} onChange={e => handleChange(e,index)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -132,7 +148,8 @@ const SubProjectList = props => {
                                                                 Description: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="projectDescription"  onChange={e => handleChange(e,index)} size="25" />
+                                                                <input type="text" name="projectDescription" size="25" />
+                                                                {/* <input type="text" name="projectDescription"  onChange={e => handleChange(e,index)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -146,7 +163,8 @@ const SubProjectList = props => {
                                                                 Notes: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="progress"  onChange={e => handleChange(e,index)} size="25" />
+                                                                <input type="text" name="progress" size="25" />
+                                                                {/* <input type="text" name="progress"  onChange={e => handleChange(e,index)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -191,7 +209,15 @@ const SubProjectList = props => {
                                                             </div>
                                                         </div> */}
                                                     </section>
-
+                                                    <td className="w-25 p-2 text-center align-center"><button type="button" className="btn btn-outline-danger" onClick={() => console.log("Clicked Update!")}>Update</button></td>
+                                                    <td className="w-25 p-2 text-left align-middle"><button type="button" className="btn btn-outline-danger" onClick={() => console.log("Clicked Cancel!")}>Cancel</button></td>
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                    <td className="w-24 p-2 text-center align-center"><button type="button" className="btn btn-outline-danger" onClick={() => deleteOneProject(data._id)}>Delete</button></td>
                                                 </div>
 
 
