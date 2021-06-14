@@ -179,32 +179,33 @@ const SubProjectList = props => {
 
                                                     </section>
                                                     <div class="container">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                        
+                                                        <div class="row">
+                                                            <div class="col">
+                                                            </div>
+
+                                                            <div class="col">
+                                                            
+                                                            <td className="w-6 text-left align-left">
+                                
+                                                                <button type="button" className="btn btn-outline-success" onClick={() => console.log("Clicked Update!")}>Update</button>
+                                                                
+                                                                <button 
+                                                                type="button" 
+                                                                className="btn btn-outline-warning" 
+                                                                onClick={() => console.log("Clicked Cancel!")}
+                                                                >Cancel
+                                                                </button>
+                                                            </td>
+
+                                                            </div>
+                                                            
+                                                            <div class="col">
+                                                            </div>
+                                                            
+                                                            <div class="col">
+                                                            </div>
+
                                                         </div>
-                                                        <div class="col">
-                                                        
-                                                    <td className="w-6 p-2 text-center align-center"><button type="button" className="btn btn-outline-success" onClick={() => console.log("Clicked Update!")}>Update</button></td>
-                                                        </div>
-                                                        <div class="col">
-                                                        
-                                                    <td className="w-25 p-2 text-left align-middle">
-                                                        <button 
-                                                        type="button" 
-                                                        className="btn btn-outline-warning" 
-                                                        onClick={() => console.log("Clicked Cancel!")}
-                                                        >Cancel
-                                                        </button>
-                                                    </td>
-                                                        </div>
-                                                        <div class="col">
-                                                        
-                                                        </div>
-                                                        <div class="col">
-                                                        
-                                                        </div>
-                                                    </div>
                                                     </div>
                                                     
 
