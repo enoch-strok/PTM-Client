@@ -106,8 +106,8 @@ const SubProjectList = props => {
                                                                 Project Name: 
                                                             </div>
                                                             <div className="col">
-                                                                {/* <input type="text" name="projectName" placeholder="Project Name" size="25" value={data.projectName}/> */}
-                                                                <input type="text" name="projectName" placeholder={data.projectName} size="25" />
+                                                                {/* <input type="text" name="projectName" placeholder="Project Name" size="20" value={data.projectName}/> */}
+                                                                <input type="text" name="projectName" placeholder={data.projectName} size="20" />
                                                                 {/* <input type="text" name="projectName" placeholder={data.projectName} onChange={e => handleChange(e,data._id)} size="25" /> */}
                                                             </div>
                                                             <div className="col">
@@ -122,8 +122,8 @@ const SubProjectList = props => {
                                                                 Project Status: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="projectStatus" placeholder={data.projectStatus} size="25" />
-                                                                {/* <input type="text" name="projectStatus" placeholder={data.projectStatus} onChange={e => handleChange(e,index)} size="25" /> */}
+                                                                <input type="text" name="projectStatus" placeholder={data.projectStatus} size="20" />
+                                                                {/* <input type="text" name="projectStatus" placeholder={data.projectStatus} onChange={e => handleChange(e,index)} size="20" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -138,8 +138,8 @@ const SubProjectList = props => {
                                                                 Progress: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="progress" placeholder={data.progress} size="25" />
-                                                                {/* <input type="text" name="progress" placeholder={data.progress} onChange={e => handleChange(e,index)} size="25" /> */}
+                                                                <input type="text" name="progress" placeholder={data.progress} size="20" />
+                                                                {/* <input type="text" name="progress" placeholder={data.progress} onChange={e => handleChange(e,index)} size="20" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -153,8 +153,8 @@ const SubProjectList = props => {
                                                                 Description: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="projectDescription" size="25" />
-                                                                {/* <input type="text" name="projectDescription"  onChange={e => handleChange(e,index)} size="25" /> */}
+                                                                <input type="text" name="projectDescription" size="20" />
+                                                                {/* <input type="text" name="projectDescription"  onChange={e => handleChange(e,index)} size="20" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -168,8 +168,8 @@ const SubProjectList = props => {
                                                                 Notes: 
                                                             </div>
                                                             <div className="col">
-                                                                <input type="text" name="progress" size="25" />
-                                                                {/* <input type="text" name="progress"  onChange={e => handleChange(e,index)} size="25" /> */}
+                                                                <input type="text" name="progress" size="20" />
+                                                                {/* <input type="text" name="progress"  onChange={e => handleChange(e,index)} size="20" /> */}
                                                             </div>
                                                             <div className="col">
 
@@ -185,11 +185,10 @@ const SubProjectList = props => {
                                                     </section>
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="col">
+                                                            <div class="col-sm-3">
                                                             </div>
 
-                                                            <div class="col">
-                                                            
+                                                            <div class="col-sm-6">
                                                             <td className="w-6 text-left align-left">
                                 
                                                                 <button type="button" className="btn btn-outline-success" onClick={() => console.log("Clicked Update!")}>Update</button>
@@ -201,7 +200,6 @@ const SubProjectList = props => {
                                                                 >Cancel
                                                                 </button>
                                                             </td>
-
                                                             </div>
                                                             
                                                             <div class="col">
