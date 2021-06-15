@@ -67,7 +67,12 @@ const SubProjectList = props => {
                 console.log("Delete Attempt Error: ",err);
             })
     };
-    
+
+    const cancelDetailsEdit = () => {
+        setTrigger(trigger + 1);
+        console.log("Clicked Cancel!");
+    };
+
     return (
                 <div>
                     {projectList.filter(projectObj => projectObj._id === projectId)
@@ -192,7 +197,7 @@ const SubProjectList = props => {
                                                                 <button 
                                                                 type="button" 
                                                                 className="btn btn-outline-warning" 
-                                                                onClick={() => console.log("Clicked Cancel!")}
+                                                                onClick={cancelDetailsEdit}
                                                                 >Cancel
                                                                 </button>
                                                             </td>
